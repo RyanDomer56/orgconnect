@@ -1,0 +1,169 @@
+body {
+    background-image: url(../images/backgroundV2.png);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 2000;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+  }
+
+  .nav-logo img {
+    height: 150px;
+    width: 150px;
+    margin-right: 4rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    
+  }
+
+  .nav-links .icon-btn {
+    background-color: #682fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .nav-links .icon-btn:hover {
+    background-color: #682fff;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;
+  }
+
+  main{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+   }
+
+  .forgot-password-container {
+    background: white;
+    padding: 3rem 2rem 0rem;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.icon-circle {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px #a149d4;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+/* First inner circle (larger) */
+.icon-circle::before {
+    content: '';
+    position: absolute;
+    width: 160px;  /* Larger than the smallest circle */
+    height: 160px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #a149d4;
+}
+
+/* Second inner circle (smaller) */
+
+
+.icon-circle img {
+    width: 220px;  /* Adjusted size to fit within the smallest circle */
+    height: 220px;
+    position: relative;
+    margin-top: 15px;
+    opacity: 0.8;
+    
+}
+
+h1 {
+    color: #3b1b74;
+    font-family: "Trend Sans One Regular";
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #737373;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+    letter-spacing: 1px;
+}
+
+.gradient-line {
+    width: 80%;
+    max-width: 300px;
+    height: 20px;
+    background: linear-gradient(90deg, #832eff, #fe4ff2);
+    margin: 0 auto;
+    border-radius: 50px;
+    position: relative;
+    top: 12px;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
